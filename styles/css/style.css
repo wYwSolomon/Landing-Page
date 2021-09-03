@@ -70,7 +70,7 @@ section {
   width: 100%;
   height: 100vh;
   background: linear-gradient(to right top, #ff4988, #ffc781, #fffefc);
-  opacity: 0.9;
+  opacity: 1;
 }
 
 .signup {
