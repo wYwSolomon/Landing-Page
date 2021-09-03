@@ -1,0 +1,448 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap");
+
+$purple: #814096;
+$pink: #f83292;
+$gold: rgb(243, 192, 97);
+$gradient: linear-gradient(90deg, $purple, $pink);
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+
+  &::selection {
+    background: $pink;
+    color: #fff;
+  }
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f9f9f9;
+}
+
+section {
+  min-height: 100vh;
+  padding: 0 9%;
+  padding-top: 7.5rem;
+}
+
+.btn {
+  display: inline-block;
+  background: $gradient;
+  margin-top: 1rem;
+  padding: 0.8rem 3rem;
+  border-radius: 5rem;
+  font-size: 1.7rem;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.heading {
+  text-align: center;
+  background: $gradient;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  padding: 1rem;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  padding: 2rem 9%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1000;
+
+  .logo {
+    font-size: 2rem;
+    color: $purple;
+
+    span {
+      color: $pink;
+    }
+  }
+
+  .navbar a {
+    font-size: 1.7rem;
+    margin-left: 2rem;
+    color: $purple;
+
+    &:hover {
+      color: $pink;
+    }
+  }
+
+  input {
+    display: none;
+  }
+
+  label {
+    font-size: 3rem;
+    color: $purple;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(../../images/home-bg-img.png) no-repeat;
+  background-size: cover;
+
+  .content {
+    p {
+      font-size: 1.7rem;
+      color: #666;
+      padding: 1rem 0;
+    }
+
+    h3 {
+      font-size: 5.5rem;
+      color: #333;
+      text-transform: uppercase;
+
+      span {
+        color: $pink;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .image img {
+    width: 40vw;
+    animation: float 3s linear infinite;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0rem);
+  }
+
+  50% {
+    transform: translateY(-3.5rem);
+  }
+}
+
+.features {
+  .box-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    .box {
+      flex: 1 1 30rem;
+      background: #fff;
+      border: 0.1rem solid rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+      margin: 1.5rem;
+      padding: 3rem 2rem;
+      border-radius: 0.5rem;
+      text-align: center;
+      transition: 0.2s linear;
+
+      img {
+        height: 15rem;
+      }
+
+      h3 {
+        font-size: 2rem;
+        color: #333;
+        padding-top: 1rem;
+      }
+      p {
+        font-size: 1.3rem;
+        color: #666;
+        padding: 1rem 0;
+      }
+    }
+  }
+}
+
+.about {
+  background: url(../../images/about-bg.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 3rem;
+
+  .column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .image {
+      flex: 1 1 40rem;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .content {
+      flex: 1 1 40rem;
+
+      h3 {
+        font-size: 3rem;
+        color: #666;
+      }
+
+      p {
+        font-size: 1.5rem;
+        color: #666;
+        padding: 1rem 0;
+      }
+
+      .buttons a:last-child {
+        margin-left: 2rem;
+      }
+    }
+  }
+}
+
+.newsletter {
+  text-align: center;
+  padding: 5rem 1rem;
+  background: url(../../images/subscribe-bg.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  h3 {
+    color: #fff;
+    font-size: 3rem;
+    text-transform: uppercase;
+  }
+
+  p {
+    color: #fff;
+    font-size: 1.6rem;
+    margin: 2rem auto;
+    width: 70rem;
+  }
+
+  form {
+    display: flex;
+    max-width: 70rem;
+    border: 0.2rem solid #fff;
+    padding: 0.5rem;
+    margin: 2rem auto;
+    height: 5.5rem;
+    border-radius: 5rem;
+
+    input[type="email"] {
+      padding: 0 2rem;
+      font-size: 1.7rem;
+      background: none;
+      width: 100%;
+      color: #fff;
+      text-transform: none;
+
+      &::placeholder {
+        color: #eee;
+        text-transform: capitalize;
+      }
+    }
+    input[type="submit"] {
+      background: #fff;
+      width: 20rem;
+      font-size: 1.7rem;
+      border-radius: 5rem;
+      cursor: pointer;
+
+      &:hover {
+        color: $pink;
+      }
+    }
+  }
+}
+
+.review {
+  .box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .box {
+      background: #fff;
+      margin: 1rem;
+      padding: 1rem;
+      text-align: center;
+      position: relative;
+      border: 0.1rem solid rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+      flex: 1 1 30rem;
+
+      .fa-quote-right {
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+        font-size: 8rem;
+        color: $pink;
+        opacity: 0.3;
+      }
+
+      .user {
+        img {
+          border-radius: 50%;
+          object-fit: cover;
+          height: 7rem;
+          width: 7rem;
+          margin-top: 2rem;
+        }
+
+        h3 {
+          color: $pink;
+          font-size: 2rem;
+        }
+
+        .stars i {
+          color: $gold;
+          font-size: 1.5rem;
+          padding: 1rem 0;
+        }
+      }
+
+      .comment {
+        color: #666;
+        font-size: 1.4rem;
+        padding: 1rem;
+      }
+    }
+  }
+}
+
+// media queries
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 992px) {
+  section {
+    padding: 0 3%;
+    padding-top: 7.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    label {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .navbar {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: #fff;
+      padding: 1rem 2rem;
+      border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+      transform-origin: top;
+      transform: scaleY(0);
+      opacity: 0;
+      transition: 0.3s linear;
+
+      a {
+        display: block;
+        margin: 2rem 0;
+        font-size: 2rem;
+        text-align: center;
+      }
+    }
+
+    input:checked {
+      ~ .navbar {
+        transform: scaleY(1);
+        opacity: 1;
+      }
+
+      ~ label::before {
+        content: "\f00d";
+      }
+    }
+  }
+
+  .home {
+    flex-flow: column-reverse;
+
+    .content {
+      p {
+        font-size: 1.5rem;
+      }
+
+      h3 {
+        font-size: 3.6rem;
+      }
+    }
+
+    .image img {
+      width: 100%;
+    }
+  }
+
+  .about {
+    background-position: right;
+
+    .column .content .buttons {
+      text-align: center;
+    }
+  }
+
+  .newsletter p {
+    width: auto;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .home .content .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .about .column .content .buttons a {
+    width: 100%;
+    text-align: center;
+
+    &:last-child {
+      margin: 1rem 0;
+    }
+  }
+}
