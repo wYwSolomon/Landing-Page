@@ -71,7 +71,6 @@ section {
   height: 100vh;
   background: linear-gradient(to right top, #ff4988, #ffc781, #fffefc);
   opacity: 0.9;
-  transition: all 1s;
 }
 
 .signup {
