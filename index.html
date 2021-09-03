@@ -10,9 +10,9 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
     <!-- custom css file link -->
-    <link rel="stylesheet" href="../styles/css/style.css" />
+    <link rel="stylesheet" href="./styles/css/style.css" />
     <title>Practice HTML & CSS</title>
-    <!-- <script defer src="../scripts/app.js"></script> -->
+    <script defer src="./scripts/app.js"></script>
   </head>
   <body>
     <!-- header section starts -->
@@ -42,11 +42,11 @@
       <div class="content">
         <h3>best mobile app <span>showcase</span></h3>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias nihil error accusamus aperiam cumque voluptate quia rerum, molestias asperiores, vitae</p>
-        <a href="#" class="btn">download now</a>
+        <a href="#" class="btn" id="signup">download now</a>
       </div>
 
       <div class="image">
-        <img src="/images/home-img.png" alt="">
+        <img src="./images/home-img.png" alt="">
       </div>
 
     </section>
@@ -60,21 +60,21 @@
 
         <div class="box-container">
           <div class="box">
-            <img src="../images/f-icon1.png" alt="">
+            <img src="./images/f-icon1.png" alt="">
             <h3>amazing UI design</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil soluta magnam, explicabo quasi optio tenetur eveniet atque sequi iusto earum ducimus! Aut expedita necessitatibus atque natus accusantium enim ipsum et!</p>
                 <a href="#" class="btn">read more</a>
           </div>
         
           <div class="box">
-            <img src="../images/f-icon2.png" alt="">
+            <img src="./images/f-icon2.png" alt="">
             <h3>soft and smooth animation</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil soluta magnam, explicabo quasi optio tenetur eveniet atque sequi iusto earum ducimus! Aut expedita necessitatibus atque natus accusantium enim ipsum et!</p>
                 <a href="#" class="btn">read more</a>
           </div>
         
           <div class="box">
-            <img src="../images/f-icon3.png" alt="">
+            <img src="./images/f-icon3.png" alt="">
             <h3>Friendly interactions</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil soluta magnam, explicabo quasi optio tenetur eveniet atque sequi iusto earum ducimus! Aut expedita necessitatibus atque natus accusantium enim ipsum et!</p>
                 <a href="#" class="btn">read more</a>
@@ -91,7 +91,7 @@
 
       <div class="column">
         <div class="image">
-          <img src="../images/about-img.png" alt="">
+          <img src="./images/about-img.png" alt="">
         </div>
         <div class="content">
           <h3>easy and perfect solution for your buisiness app</h3>
@@ -132,7 +132,7 @@
         <div class="box">
           <i class="fas fa-quote-right"></i>
           <div class="user">
-            <img src="../images/pic1.png" alt="">
+            <img src="./images/pic1.png" alt="">
             <h3>john deo</h3>
             <div class="stars">
               <i class="fas fa-star"></i>
@@ -148,7 +148,7 @@
         <div class="box">
           <i class="fas fa-quote-right"></i>
           <div class="user">
-            <img src="../images/pic2.png" alt="">
+            <img src="./images/pic2.png" alt="">
             <h3>john deo</h3>
             <div class="stars">
               <i class="fas fa-star"></i>
@@ -164,7 +164,7 @@
         <div class="box">
           <i class="fas fa-quote-right"></i>
           <div class="user">
-            <img src="../images/pic3.png" alt="">
+            <img src="./images/pic3.png" alt="">
             <h3>john deo</h3>
             <div class="stars">
               <i class="fas fa-star"></i>
@@ -182,5 +182,39 @@
     </section>
 
     <!-- review section end -->
+
+    <!-- sign up form start -->
+
+    
+    <div class="signup hidden">
+      <div class="overlay"></div>
+      <div class="signup__box">
+        <h1 class="signup__heading">Create account</h1>
+        <p class="signup__already">Already have an account? <a href="#" class="signup__link signup__link--underline">Sign in</a></p>
+        <form action="#" class="signup__form">
+          <div class="form__group">
+            <input type="text" class="form__input" placeholder="Middle Name">
+          </div>
+          <div class="form__group form__group--2">
+            <input type="text" class="form__input" placeholder="First Name">
+            <input type="text" class="form__input" placeholder="Last Name">
+          </div>
+          <div class="form__group">
+            <input type="email" class="form__input" placeholder="E-mail">
+          </div>
+          <div class="form__group">
+            <button type="submit" class="form__submit"> 
+              Sign up <i class="fas fa-long-arrow-alt-right"></i>
+            </button>
+          </div>
+          <div class="form__tos">
+            <input type="checkbox" id="tos">
+            <label for="tos">I have read and agree to the <a href="#" class="signup__link">Term of Service</a></label>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- sign up form end -->
   </body>
 </html>
